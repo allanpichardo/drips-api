@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Allan Pichardo",
-  "license": "ISC",
+  "license": "Apache 2.0",
+  "repository" : {
+    "type" : "git"
+  , "url" : "https://github.com/allanpichardo/drips-api.git"
+  },
   "dependencies": {
     "bcrypt": "^1.0.2",
     "bookshelf": "^0.10.3",
