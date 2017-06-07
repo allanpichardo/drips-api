@@ -4,25 +4,26 @@
   "description": "Drips digital archive API",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
   "author": "Allan Pichardo",
-  "license": "Apache 2.0",
-  "repository" : {
-    "type" : "git"
-  , "url" : "https://github.com/allanpichardo/drips-api.git"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allanpichardo/drips-api.git"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
     "bookshelf": "^0.10.3",
-    "express": "^4.15.2",
+    "express": "^4.15.3",
     "knex": "^0.12.9",
-    "knex-postgis": "^0.2.1",
+    "knex-postgis": "^0.2.2",
     "mysql": "^2.13.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "sinon": "^2.1.0"
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.2"
   }
 }

@@ -1,7 +1,9 @@
 "use strict";
 
 const Model = require('../db/Model');
+const Database = require('../db/Database');
 const bcrypt = require('bcrypt');
+const Item = require('Item');
 
 class User extends Model {
 
@@ -71,6 +73,20 @@ class User extends Model {
                 }
             });
         })
+    }
+
+    getItems() {
+        return new Promise((resolve, reject) => {
+            Database.connection(Item.table).where({
+                user_id: this.id
+            }).select().then((results) => {
+                let items = [];
+                for (let result in results) {
+                    items.push(Item.fromJson(result));
+                }
+                resolve(items);
+            });
+        });
     }
 
 }
